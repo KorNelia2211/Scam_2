@@ -2,6 +2,7 @@ let rh = 60;
 let rw = 350;
 let s = 25;
 let t = 0;
+let gameover = false;
 
 function preload() {
   img1 = loadImage('IMG_1300.png');
@@ -37,11 +38,8 @@ function draw() {
   
  if(mouseX > centerX + 150 - s/2 && mouseX < centerX + 150 + s/2 &&
 mouseY > centerY - s/2 && mouseY < centerY + s/2 && mouseIsPressed){
-    t++;
-   if(t==20){
-     window.location.href ='https://emi22-emi.github.io/Scam_3/';
-      print('go');
-   }
+   gameover = true;
+    
    
    fill('#8D8D8D');
   stroke('#8D8D8D');
@@ -53,7 +51,13 @@ mouseY > centerY - s/2 && mouseY < centerY + s/2 && mouseIsPressed){
   strokeWeight(2);
   square(centerX + 150,centerY,s);
     }
-  
+  if(gameover){
+    t++;
+   if(t==20){
+     window.location.href ='https://emi22-emi.github.io/Scam_3/';
+      print('go');
+   }
+  }
     
   let currentFrame = Math.floor((frameCount % 60) / 15);
 
