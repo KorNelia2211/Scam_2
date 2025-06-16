@@ -38,7 +38,7 @@ function draw() {
  if(mouseX > centerX + 150 - s/2 && mouseX < centerX + 150 + s/2 &&
 mouseY > centerY - s/2 && mouseY < centerY + s/2 && mouseIsPressed){
     t++;
-   if(t==40){
+   if(t==20){
      window.location.href ='https://emi22-emi.github.io/Scam_3/';
       print('go');
    }
